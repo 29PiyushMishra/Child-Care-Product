@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Child's Care Products </title>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        l
+
+        /* CSS variables */
+        :root {
+            --navbar-height: 60px;
+        }
+
+        /* Navigation bar */
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0px;
+
+
+
+        }
+
+        /*NAVIGATION BAR logo and imag */
+        #logo {
+            margin: 34px 35px;
+        }
+
+        #logo img {
+            width: 150px;
+            height: 100px;
+            margin: -30px -16px
+        }
+
+        /* NAVIGATIONS BAR : list styleing */
+
+        #navbar ul {
+            display: flex;
+            padding: 40px;
+            font-family: 'Baloo bhai', cursive;
+        }
+
+        #navbar::before {
+            content: "";
+            background-color: rgb(8, 8, 8);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        #navbar ul li {
+            list-style: none;
+            font-size: 1.4rem;
+            margin: auto;
+
+        }
+
+        #navbar ul li a {
+            color: blanchedalmond;
+            text-shadow: 2px 2px 5px rgb(232, 113, 243);
+            display: block;
+            padding: 4px 13.9px;
+            border-radius: 20px;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+
+        #navbar ul li a:hover {
+            color: black;
+            background-color: rgb(228, 142, 245);
+        }
+
+        /* Home section */
+        #home {
+            display: flex;
+            flex-direction: column;
+            padding: -60px 200px;
+            height: 750px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home::before {
+            content: "";
+            background-image: url(https://dev.rodpub.com/images/130/975_main.jpg);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.899;
+        }
+
+        #home h1 {
+            color: rgb(13, 13, 13);
+            text-align: center;
+            font-family: 'Baloo bhai', cursive;
+        }
+
+        #home p {
+            color: rgb(7, 7, 7);
+            text-align: center;
+            font-size: 2.3rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        #register-now {
+            text-decoration: none;
+            color: honeydew;
+            padding: 40px;
+
+        }
+
+        #register-now:hover {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 2.5rem;
+
+
+        }
+
+        .btin {
+            padding: 6px 10px;
+            border: 2px solid rgb(41, 40, 40);
+            border-radius: 25px;
+            background-color: rgb(233, 132, 236);
+            color: black;
+            margin: 10px;
+            font-size: 2.0rem;
+            font-family: fantasy;
+            cursor: pointer;
+
+        }
+
+        .btin:hover {
+            padding: 6px 10px;
+            border: 2px solid rgb(41, 40, 40);
+            border-radius: 10px;
+            background-color: rgb(210, 53, 241);
+            color: black;
+            margin: 10px;
+            font-size: 1.0rem;
+            font-family: fantasy;
+            cursor: pointer;
+
+        }
+
+
+        /* utility classes */
+        .h-primary {
+            font-size: 3.1rem;
+            padding: 14px;
+        }
+
+        .h-secondary {
+            font-size: 2.9rem;
+            padding: 14px;
+        }
+
+
+
+
+        /* btin */
+
+
+
+
+
+
+        /* services   =about section */
+        .center {
+            text-align: center;
+            font-size: 2.1rem;
+        }
+
+        /* for about us  */
+        #about {
+
+            margin: 2px;
+            display: flex;
+        }
+
+        #about .box {
+            border: 2px solid rgb(39, 39, 39);
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            width: 500px;
+            background-color: rgb(237, 177, 243);
+
+        }
+
+
+        /*   for nutrition */
+        #nutrition {
+
+            margin: 10px;
+            display: flex;
+        }
+
+        #nutrition .box {
+            border: 2px solid brown;
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            background-color: rgb(231, 190, 235);
+        }
+
+        /*   for gallery */
+        #gallery {
+
+            margin: 10px;
+            display: flex;
+        }
+
+        #gallery .box {
+            border: 2px solid brown;
+            border-radius: 25px;
+            padding: 10px 8px 15px 10px;
+            margin: 4px;
+            background-color: rgb(242, 169, 248);
+        }
+
+
+        .about-container {
+            background-color: rgb(88, 117, 170);
+        }
+
+        .gallery-container {
+            background-color: rgb(122, 186, 206);
+        }
+
+        /* contat us  */
+        #contact-us {
+            height: 320px;
+            color: cornsilk;
+
+            width: 97%;
+            /* margin: 20px; */
+            padding: 20px 20px;
+            background-color: rgb(147, 89, 89);
+        }
+
+        #contact {
+            border: 2px solid rgb(47, 48, 47);
+            padding: 20px;
+            padding-top: 2px;
+            display: block;
+            width: 38%;
+            height: 220px;
+            align-content: center;
+
+            margin: 1px auto;
+            margin-top: 5px;
+            border-radius: 20px;
+            background-color: rgb(173, 10, 10)
+        }
+
+
+
+
+
+        #pn {
+            color: black;
+            font-size: 2.2rem;
+            background-color: gray;
+            text-shadow: 2px 2px 5px rgb(211, 10, 10);
+        }
+
+        #pn:hover {
+            background-color: rgb(20, 20, 20);
+            color: blanchedalmond;
+        }
+
+        /* image setting of about  */
+        .i1st {
+
+            width: 490px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i2nd {
+
+            width: 450px;
+            height: 250px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i3rd {
+            width: 455px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i4th {
+            width: 480px;
+            height: 250px;
+            padding: 7px 5px 9px 5px;
+        }
+
+        .i5th {
+            width: 450px;
+            height: 250px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i6th {
+            width: 450px;
+            height: 280px;
+            padding: 8px -5px 7px 18px;
+        }
+
+        .i7th {
+            width: 480px;
+            height: 250px;
+            padding: 7px 5px 9px 5px;
+        }
+
+        .i8th {
+            width: 450px;
+            height: 250px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i9th {
+            width: 450px;
+            height: 280px;
+            padding: 8px -5px 7px 18px;
+        }
+
+        /* Gallery */
+        .i1 {
+
+            width: 480px;
+            height: 300px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i2 {
+            width: 480px;
+            height: 300px;
+            padding: 8px 3px 0px 8px;
+        }
+
+        .i3 {
+            width: 400px;
+            height: 293px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i4 {
+            width: 420px;
+            height: 250px;
+            padding: 7px 5px 9px 5px;
+        }
+
+        .i5 {
+            width: 500px;
+            height: 250px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i6 {
+            width: 479px;
+            height: 280px;
+            padding: 8px -5px 7px 18px;
+        }
+
+        .i7 {
+            width: 500px;
+            height: 250px;
+            padding: 7px 5px 9px 5px;
+        }
+
+        .i8 {
+            width: 420px;
+            height: 350px;
+            padding: 8px 3px 7px 8px;
+        }
+
+        .i9 {
+            width: 480px;
+            height: 380px;
+            padding: 8px -5px 7px 18px;
+        }
+
+        input[type=fext] {
+            width: 130px;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+            transition: width 0.4s ease-in-out;
+        }
+
+        input[type=Fext]:focus {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body style="background-color:cornflowerblue ;">
+    <nav id="navbar">
+        <div id="logo">
+            <a href="http://127.0.0.1:5500/piyush%20site.html"><img
+                    src="https://www.babybunting.com.au/media/brandsNew2013/CHI.jpg" alt="sorry img is not loading">
+            </a>
+        </div>
+        <ul>
+            <li class="item"><a href="#home">home</a></li>
+            <li class="item"><a href="#abouth">About Us</a></li>
+            <li class="item"><a href="#training">Products</a></li>
+            <li class="item"><a href="#dieting">Nutrition</a></li>
+            <li class="item"><a href="#gallerys">Our Creations</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+            <li class="item"><a href="https://mail.google.com/mail/u/0/?ogbl#inbox" target="blank">Email Us </a></li>
+            <li class="item">
+                <form>
+                    <input type="Fext" name="search" placeholder="Search..">
+                </form>
+            </li>
+
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">Children must be taught how to think, not what to think <br> <strong>WE CARE</strong>
+        </h1>
+        <p>We worry about what a child will become tomorrow, yet we forget that he is someone today <br> Make your child
+            happy and healthy <br> with our Products</p>
+        <p>“Each day of our lives we make deposits in the memory banks of our children.”</p>
+
+    </section>
+
+    <section class="about-container ">
+        <h1 class="h-primary center" id="abouth" style="background-color: lightseagreen;">
+            WHATEVER YOU WANT
+        </h1>
+        <div id="about">
+            <div class="box">
+                <img src="https://dev.rodpub.com/images/130/975_main.jpg" class="i1st" alt="image is not avalaible yet">
+                <h2 class="h-secendary center"> WE HAVE ALL CLEANING STUF </h2>
+                <p class=" center "> Our Company Is powered By Top Brands <br>
+                    like "johnson baby ,huggies and etc"
+                    <br>
+                    we believe in costomers needs .</p>
+            </div>
+            <div class="box">
+                <img src="https://lh3.googleusercontent.com/proxy/fLw7Obyd0kLhvsriiNrXcIqZWIC9yoQNjgPGXSX69egYAGx0DYj9SjCJdDNFj_swdSEaMMUhptdp8H64X54qYqMlWbiGicE"
+                    alt="image is not avalaible yet" class="i2nd">
+                <h2 class="h-secendary center"> BABY MEDICINES</h2>
+                <p class=" center "> We have Best quality And tested madicines in our stock <br>
+                    Every type of .... stuf <br>
+                    We have Sellers from all around globe <br>
+                    all the things tested very carefully </p>
+            </div>
+            <div class="box">
+                <img src="https://cdn4.vectorstock.com/i/1000x1000/71/38/kids-toys-cartoon-icons-collection-vector-12447138.jpg"
+                    alt="image is not avalaible yet" class="i3rd ">
+                <h2 class="h-secendary center"> CHILDERNS SHOULD PLAY</h2>
+                <p class=" center "> Best Toys for girls and boys both.</p>
+            </div>
+        </div>
+
+        <br><br><br>
+        <h1 class="h-secendary center" id="dieting" style="background-color: lightskyblue;">One must eat to live, not
+            live to eat.</h1>
+
+        <div id="nutrition">
+            <div class="box">
+                <a href="https://dir.indiamart.com/impcat/baby-milk-powder.html"> <img
+                        src="https://cdn.cdnparenting.com/articles/2018/07/743111095-H.jpg" class="i7th"
+                        alt="image is not avalaible yet"></a>
+
+                <h2 class="h-secendary center"> GIVE THEM </h2>
+                <p class=" center "> eating habbit is good but food should healthy
+
+                </p>
+
+            </div>
+            <div class="box">
+                <a
+                    href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.in%2FNestle-Cerelac-Fortified-Cereal-Wheat%2Fdp%2FB00I4SYXIK&psig=AOvVaw0RB1fOwZNAfgbal81lmPKR&ust=1586548067804000&source=images&cd=vfe&ved=0CAMQjB1qFwoTCKC9nMCO3OgCFQAAAAAdAAAAABAE"><img
+                        src="https://images-na.ssl-images-amazon.com/images/I/81%2BjQkH%2BzgL._SL1500_.jpg"
+                        alt="image is not avalaible yet" class="i8th"></a>
+
+                <h2 class="h-secendary center"> PROTIEN FOR YOUR CHILD </h2>
+                <p class=" center "> We have Guaranteed and Higly Recomended protien's From our professionals with high
+                    Quality and with Zero Side Effect .</p>
+            </div>
+            <div class="box">
+                <a href="https://dir.indiamart.com/impcat/baby-milk-powder.html">
+                    <img src="https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/nutraingredients-asia.com/news/manufacturers/asahi-jv-launches-new-mother-and-baby-formula-range-to-drive-growth-in-vietnam/9365166-2-eng-GB/Asahi-JV-launches-new-mother-and-baby-formula-range-to-drive-growth-in-Vietnam_wrbm_large.jpg"
+                        class="i9th ">
+                </a>
+
+                <h2 class="h-secendary center">MILK PRODUCTS</h2>
+                <p class=" center "> We Created very efficient Nutrition stock From our Proffesionals with help of past
+                    experiences . </p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!--  Gallery   -->
+    <section>
+
+
+        <section class="gallery-container ">
+            <h1 class="g-primary center" id="gallerys"
+                style="color: blanchedalmond; background-color: rgb(0, 119, 199); text-shadow: 4px 4px 8px red;">
+                WE CREAT DIFFERENT BUT EFFICIENT
+            </h1>
+            <div id="gallery">
+                <div class="box">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/71m3wKSdvyL._SL1500_.jpg" class="i1"
+                        alt="image is not avalaible yet">
+
+                </div>
+                <div class="box">
+                    <img src="https://sc01.alicdn.com/kf/UTB8.EKQFarFXKJk43Ovq6ybnpXaM.jpg"
+                        alt="image is not avalaible yet" class="i2">
+
+                </div>
+                <div class="box">
+                    <img src="https://bazzar.hr/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL1VuSGc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--a271e08ad969b2d3e625ec2ccbef1f7f55f3a8ec/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpldzQ2RUdKdmNtUmxjbU52Ykc5eVNTSUtkMmhwZEdVR09nWkZWRG9MWW05eVpHVnlhUVk2Q1daMWVucEpJZ2N4SlFZN0IxUTZDWFJ5YVcxVU9ncHpkSEpwY0ZRNkRuUm9kVzFpYm1GcGJFa2lERFV3TUhnMU1EQUdPd2RVT2d4bmNtRjJhWFI1U1NJTFkyVnVkR1Z5QmpzSFZEb1BZbUZqYTJkeWIzVnVaRWtpQ25kb2FYUmxCanNIVkRvTFpYaDBaVzUwU1NJTU5UQXdlRFV3TUFZN0IxUT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--15915d85170142a1d56fdd6a69310acbd4be84ec/3256-1_5c06198887ee5.jpg"
+                        alt="image is not avalaible yet" class="i3 ">
+
+                </div>
+            </div>
+            <br><br>
+            <h1 class="h-secendary center" id="training"
+                style="color: gold; border: 1px solid rgb(53, 51, 51); background-color: grey; padding: 10px; text-shadow: 5px 5px 9px rgb(172, 0, 0); ">
+                Best Offers on top Brands </h1>
+            <div id="gallery">
+                <div class="box">
+                    <a href="https://www.huggies.co.in/en-in/" target="blank"><img
+                            src="https://rukminim1.flixcart.com/image/612/612/k2rwlu80/diaper/z/w/d/wonder-pants-diaper-m-76-huggies-original-imafket4jshjqgej.jpeg?q=70"
+                            alt="connect internet first sorry" class="i4"></a>
+
+
+                </div>
+                <div class="box">
+
+                    <a href="https://barbie.mattel.com/shop" target="blank"> <img
+                            src="https://d2s7hpbx4rtiif.cloudfront.net/funsale/barbie-mob.jpg"
+                            alt="image is not avalaible yet" class="i5"></a>
+
+                </div>
+                <div class="box">
+                    <a href="https://www.firstcry.com/fashion-fest-offers" target="blank"><img
+                            src="https://cdn.grabon.in/gograbon/images/web-images/uploads/1575436554911/firstcry-offers.jpg"
+                            class="i6 ">
+                    </a>
+
+                </div>
+            </div>
+            <br><br><br>
+
+
+            <div id="gallery">
+                <div class="box">
+                    <h1 class="h-secendary center" id="training"
+                        style="color: gold; border: 1px solid rgb(53, 51, 51); background-color: grey; padding: 10px; text-shadow: 5px 5px 9px rgb(172, 0, 0); ">
+                        <br>
+                        Just One Click Far</h1>
+                    <a href="https://www.firstcry.com/fashion-fest-offers"> <img
+                            src="https://dealroup.com/wp-content/uploads/2019/11/FirstCry-Coupons-1024x596.jpg"
+                            class="i7" alt="image is not avalaible yet"></a>
+
+
+                </div>
+                <div class="box">
+                    <img src="https://sg.everydayonsales.com/wp-content/uploads/2015/12/Baby-Expo-Sale-Clearance-Singapore-2015-2016-Kids-Infant-Shopping-Lobang-Great-Deals-Buy-Sell-Offer.jpg"
+                        alt="image is not avalaible yet" class="i8">
+
+                </div>
+                <div class="box">
+                    <a href="https://www.amazon.in/ref=nav_logo" target="blank"> <img
+                            src="https://images-eu.ssl-images-amazon.com/images/G/31/img16/Baby/35pcBabyProductsBunkLP/1021833_bedding_440x300.jpg"
+                            alt="chech your connection" class="i9 "></a>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id=contact-us>
+            <h1 id="any-time"
+                style="background-color: rgb(122, 41, 41); padding: 20px 20px; font-size: 1.9rem; text-align: center; text-shadow: 2px 2px 5px rgb(39, 102, 236);">
+                Contact Us For Any Query or Order Details </h1>
+            <div id="contact">
+                <h1 style="font-size: 2.0rem;">
+                    We creat every thing for childrens
+                    <div>
+                        <h1>
+                            <h2 style="color: rgb(199, 172, 19);">Name -</2> Piyush Mishra
+                        </h1>
+                        <h1>Phone Number </h1>
+                        <h1 id="pn"> 63076-04951</h1>
+                        <hr>
+                        <button type="submit" class="btin"> <a href="#home" id="register-now">Back To The Top</a>
+                        </button>
+                    </div>
+                </h1>
+            </div>
+
+        </section>
+</body>
+
+</html>
